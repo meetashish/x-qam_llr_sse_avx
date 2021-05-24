@@ -247,19 +247,6 @@ int main()
   return 0;
 }
 
-void printf_m128i(char *s, __m128i x)
-{
-  printf("%s = [(%hd, %hd), (%hd, %hd), (%hd, %hd), (%hd, %hd)]\n", s,
-         _mm_extract_epi16(x, 0),
-         _mm_extract_epi16(x, 1),
-         _mm_extract_epi16(x, 2),
-         _mm_extract_epi16(x, 3),
-         _mm_extract_epi16(x, 4),
-         _mm_extract_epi16(x, 5),
-         _mm_extract_epi16(x, 6),
-         _mm_extract_epi16(x, 7));
-}
-
 void PrintIntrinsics(char *s, char *dtype, int num, void *x)
 {
   if (strcmp(dtype, "int") == 0)
